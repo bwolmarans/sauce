@@ -1,0 +1,9 @@
+Grabbing HTML Tags
+<TAG\b[^>]*>(.*?)</TAG>  matches the opening and closing pair of a specific HTML tag. Anything between the tags is captured into the first backreference. The question mark in the regex makes the star lazy, to make sure it stops before the first closing tag rather than before the last, like a greedy star would do. This regex will not properly match tags nested inside themselves, like in <TAG>one<TAG>two</TAG>one</TAG>.
+
+<([A-Z][A-Z0-9]*)\b[^>]*>(.*?)</\1>  will match the opening and closing pair of any HTML tag. Be sure to turn off case sensitivity. The key in this solution is the use of the backreference \1 in the regex. Anything between the tags is captured into the second backreference. This solution will also not match tags nested in themselves.
+
+
+
+http://www.regular-expressions.info/examples.html
+

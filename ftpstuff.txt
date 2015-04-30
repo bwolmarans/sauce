@@ -1,0 +1,5 @@
+anonymous
+d@d.com
+cd pub
+get aard.sol.tar.Z
+quit

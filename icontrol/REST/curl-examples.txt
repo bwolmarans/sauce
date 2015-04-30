@@ -1,0 +1,68 @@
+curl -k -u admin:admin -H "Content-Type:application/json" -X GET https://192.168.23.30/mgmt/tm/ltm"
+curl -k -u admin:admin -X GET https://192.168.23.30/mgmt/tm/ltm/virtual
+
+curl -k -u admin:admin -X GET https://192.168.23.30/mgmt/tm/apm/resource/leasepool/sslvpn-pool"
+
+curl -k -u admin:admin -H "Content-Type:application/json" -X POST -d '{"apiName":"http-pool","members":[{"apiName":"192.168.25.32:80"}]}' https://192.168.23.30/mgmt/tm/ltm/pool
+
+YWRtaW46YWRtaW4=
+
+https://192.168.23.30/mgmt/tm/ltm/virtual
+Content-Type:application/json
+Authentication:basic YWRtaW46YWRtaW4=
+
+
+
+curl -k -u admin:admin -H "Content-Type:
+application/json" -X POST -d 
+'{"apiName":"http-pool","members":[ 
+{"apiName":"192.168.25.32:80","description":"member1"}, 
+{"apiName":"192.168.25.33:80","description":"member2"}, 
+{"apiName":"192.168.25.34:80","description":"member3"}]}' 
+https://192.168.23.30/mgmt/tm/ltm/pool 
+{
+"allowNat": "yes",
+"allowSnat": "yes",
+"apiName": "http-pool",
+"apiPartition": "/Common/",
+"appService": "none",
+"description": "none",
+"gatewayFailsafeDevice": "none",
+"ignorePersistedWeight": "disabled",
+"ipTosToClient": "pass-through",
+"ipTosToServer": "pass-through",
+"kind": "tm:ltm:pool:poolstate",
+"linkQosToClient": "pass-through",
+"linkQosToServer": "pass-through",
+"loadBalancingMode": "round-robin",
+"members": [
+{
+"apiName": "192.168.25.32:http",
+"kind": "ltm:pool:members",
+"selfLink":
+"https://localhost/mgmt/tm/ltm/pool/http-pool/members/192.168.25.32:http"
+},
+{
+"apiName": "192.168.25.33:http",
+"kind": "ltm:pool:members",
+"selfLink":
+"https://localhost/mgmt/tm/ltm/pool/http-pool/members/192.168.25.33:http"
+"https://localhost/mgmt/tm/ltm/pool/http-pool/members/192.168.25.34:http"
+}
+],
+"metadata": [],
+"minActiveMembers": 0,
+"minUpMembers": 0,
+"minUpMembersAction": "failover",
+"minUpMembersChecking": "disabled",
+"monitor": "none",
+"partition": "Common",
+"profiles": "none",
+"queueDepthLimit": 0,
+"queueOnConnectionLimit": "disabled",
+"queueTimeLimit": 0,
+"reselectTries": 0,
+"selfLink": "https://localhost/mgmt/tm/ltm/pool/http-pool",
+"serviceDownAction": "none",
+"slowRampTime": 10
+}
